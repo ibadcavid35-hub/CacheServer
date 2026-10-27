@@ -21,8 +21,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
                .HasColumnType("decimal(18,2)")
                .IsRequired();
 
-        builder.Property(x => x.Stock)
-               .HasDefaultValue(1);
+        builder.Property(x => x.Stock);
 
         builder.HasQueryFilter(x => x.Price > 0);
     }
