@@ -102,4 +102,9 @@ public class CachedRepository : IRepository
         }
         return isUpdated;
     }
+
+    public async Task<int> SaveChangesAsync()
+    {
+        return await _repository.SaveChangesAsync();
+    }
 }

@@ -59,4 +59,9 @@ public class Repository : IRepository
 
         return await _context.SaveChangesAsync() > 0;
     }
+
+    public async Task<int> SaveChangesAsync()
+    {
+        return await _context.SaveChangesAsync(); 
+    }
 }
